@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html>
+<htm lang="en">
   <head>
-    <title>Hari's website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Career website</title>
   </head>
+  <!--<style>
+    h1{
+      font-size :40px;
+      font-family : ROboto;
+      font-weigth: normal;
+      color: rgb(100, 100, 100);
+      text-align: center;
+    }
 
+    #banner {
+      width : 100%;
+      height : 360px;
+      object-fit : cover;
+    }
+
+    h2{
+      font: family Roboto;
+      font-size :32px;
+      font-weigth: normal;
+      color: rgb(100, 100, 100);
+      text-align: center;
+      
+    }
+
+    .bodytext{
+      font-family: Roboto;
+      color : rgb(180, 180, 180);
+      
+    }
+
+    #container {
+      max-width: 720px ;
+      margin:0 auto;
+    }
+  </style>-->
   <body>
-    Hello Hari, this your first time visting.
-  
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4" >{{company_name}}Career</h1>
+    <img  class="img-fluid"src="https://website-python-flask.hari75.repl.co/static/Banner.jpg">
+    <h2 class="text-center mt-2 mb-4">About Career</h2>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum neque, consectetur non placerat cursus, euismod a turpis. Donec lobortis quis velit eget euismod. Proin tincidunt mauris nec elit imperdiet, a sollicitudin eros tempus. Nunc venenatis, nulla auctor blandit congue, elit felis sollicitudin nibh, nec sagittis lectus est nec est. Nam non arcu nec diam sodales congue eget eget mauris. Donec nisl diam, commodo sed viverra id, dictum nec mauris. Donec id mattis velit, sit amet finibus lectus. Vivamus non dui interdum dolor imperdiet viverra. Donec non ultricies nisl, quis tincidunt odio. Pellentesque quis suscipit sem, euismod facilisis est. Pellentesque bibendum bibendum aliquam. Sed a eros in purus accumsan venenatis et id justo. Aliquam nec feugiat lacus. Proin posuere facilisis ultricies. </p>
+    
+      
+      <h2 class="text-center mt-2 mb-4">Open positions</h2>
+    <p >
+      {% for job in jobs%}
+        {% include 'jobitem.html'%}
+      {% endfor %}
+    </p>
+    
+      
+      
+      <p>TODO - show jobs</p>
+    <div class="text-center" >  
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+      <p>Copyright 2022, Hari</p>
+    </div>
+    </div>    
   </body>
   
 </html>
